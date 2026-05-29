@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Premium Palette Config */
+  --color-brand-bg: #F6E9DF;
+  --color-brand-btn: #7C482C;
+  --color-brand-btn-hover: #60341B;
+  --color-brand-title: #2A1710;
+  --color-brand-accent: #A87051;
+  --color-brand-accent-light: #F0DDCD;
+  --color-brand-gold: #D4AF37;
+}
+
+/* Custom smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  background-color: #F6E9DF;
+  color: #2A1710;
+}
+
+/* Pulsing effect for main CTA */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(124, 72, 44, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px 4px rgba(124, 72, 44, 0.25);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s infinite;
+}
+
+/* Accordion max-height helper */
+.accordion-content {
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
